@@ -17,10 +17,14 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - `Cargo.toml` file: equivalent to the `package.json` file.
   - Cargo: package manager. It works like npm, but doesn't bring commands to manage (add, for example) crates/dependencies in the `Cargo.toml` file. Install the [cargo-edit](https://crates.io/crates/cargo-edit) crate (`cargo install cargo-edit`) to do this.
   - Init: `cargo new ipma-cli`.
-  - Run: `cargo run` or `cargo run --bin ipma-cli`. Compile in release mode: `cargo run --release`. With environment variable: `API_TOKEN=<token> cargo run`.
+  - Run: `cargo run` or `cargo run --bin ipma-cli`.
+    - Compile in release mode: `cargo run --release`.
+    - With an environment variable: `API_TOKEN=<token> cargo run`.
+    - With arguments passed to the binary to run: `cargo run -- lisbon`.
   - Run the binary: `./target/debug/ipma-cli`.
   - By convention, `src/main.rs` is the entry point for a binary, just like `index.js` is for JavaScript.
   - Variables (`let api_token = ...`, for example) are immutable by default.
+  - `let mut`: mutable variable.
   - [VS Code extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust).
   - `std::env::var("API_TOKEN")`: `std` crate, `std::env` module, and `var` function.
   - Rust doesn't have the concept of `null` or `undefined`. It has data types that can carry information about whether a function succeeded or failed (`Result` type, for example).
@@ -33,4 +37,10 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - The last value in an Expression is returned from that Expression.
   - Semicolons turn Expressions into Statements. They are operators that take an Expression, evaluate it, and discard the result.
   - Default return value of a function: `()` ("unit").
+  - A struct is similar to an object in JavaScript.
+  - `.collect`: to consume the iterator (to get all values without `.next`).
+  - CLI crates:
+    - ⭐ [clap](https://crates.io/crates/clap).
+    - [structopt](https://crates.io/crates/structopt).
+    - [docopt](https://crates.io/crates/docopt).
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
