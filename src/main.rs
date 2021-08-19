@@ -7,7 +7,10 @@ fn main() {
     // - https://docs.serde.rs/serde_json/value/enum.Value.html
     // - https://doc.rust-lang.org/std/fmt/
     let response = client
-        .get("https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1010500.json")
+        .get(format!(
+            "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/{id}.json",
+            id = 1110600
+        ))
         .send()
         .expect("a successful request")
         .json::<serde_json::Value>()
