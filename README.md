@@ -30,6 +30,7 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - Rust doesn't have the concept of `null` or `undefined`. It has data types that can carry information about whether a function succeeded or failed (`Result` type, for example).
   - `Result` type: `Ok` and `Err` (it is an enum with these variants). `std::env::var: Result<String, VarError>`, for example.
   - `dbg!` macro: print macro for debugging.
+    - `println!("{}", dbg!(2) == 2); // true`.
   - `.expect` (`std::env::var("API_TOKEN").expect("...");`, for example):
     - If `Ok`, `.expect` will unwrap the value and give just the `String`.
     - If `Err`, `.expect` will panic and crash the program, printing the error to the console.
@@ -43,4 +44,14 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
     - ⭐ [clap](https://crates.io/crates/clap).
     - [structopt](https://crates.io/crates/structopt).
     - [docopt](https://crates.io/crates/docopt).
+  - Crates:
+    - [reqwest](https://crates.io/crates/reqwest) (for HTTP requests).
+      - `cargo add --features "json blocking" reqwest@0.11.3`.
+    - `serde` + `serde_json` (to serialize/deserialize Rust data structures).
+      - `blocking` feature: alternative to async/await.
+      - `cargo add serde@1.0.126`.
+      - `cargo add serde_json@1.0.64`.
+  - `Vec` is similar to an array in JavaScript.
+  - An `array` in Rust is a fixed-size collection of similar elements. `&`: to convert an `array` into a `slice` (shared view).
+  - The elements of a tuple can have different types.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
