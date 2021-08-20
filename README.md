@@ -54,5 +54,7 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - `Vec` is similar to an array in JavaScript.
   - An `array` in Rust is a fixed-size collection of similar elements. `&`: to convert an `array` into a `slice` (shared view).
   - The elements of a tuple can have different types.
+  - `let x: f64 = 1.1;` (type annotation).
+  - It is necessary to add type annotations when defining functions.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
