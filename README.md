@@ -55,3 +55,4 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - An `array` in Rust is a fixed-size collection of similar elements. `&`: to convert an `array` into a `slice` (shared view).
   - The elements of a tuple can have different types.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
+- [Zig](https://ziglang.org/) programming language.
