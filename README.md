@@ -71,11 +71,13 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
       - Destructuring: `let (x, y, z) = point;` or `let (x, y, _) = point;`.
     - Structs:
       - Destructuring: `let Point { x, y, z } = point;` or `let Point { x, y: _, z } = point;` or `let Point { x, z, .. } = point;`.
+      - Naming convention: `UpperCamelCase`.
     - Arrays:
       - Only one type and fixed size: `let mut years: [i32; 3] = [1995, 2000, 2005];`.
       - `let first_year = years[0];`.
       - Destructuring: `let [_, second_year, third_year] = years;`.
       - It is possible to iterate over them, unlike tuples and structs (`for year in years.iter() { ... }`).
+    - In memory, they (tuples, structs, and arrays) are all represented as adjacent bytes with no extra metadata/overhead.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
 - [TextMate](https://macromates.com/):
