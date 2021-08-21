@@ -1,6 +1,6 @@
 # ipma-cli
 
-A Rust CLI to get weather forecasts in Portugal from IPMA.
+A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal from [IPMA](https://www.ipma.pt/en/).
 
 ## References
 
