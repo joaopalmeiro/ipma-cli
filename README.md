@@ -61,8 +61,19 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - `as`: to convert numbers (`return x as f64 / y as f64;`, for example).
   - An Expression evaluates to a value. A Statement does not evaluate to a value.
   - In a function: `return x * y;` (Statement, `x * y` Expression) or `x * y` (Expression). If a function ends with an Expression, it automatically returns that Expression.
+  - Macro: it can be seen as a kind of syntactic sugar.
+  - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) (VS Code extension).
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
+- [TextMate](https://macromates.com/):
+  - Text editor for macOS.
+  - [EditorConfig](https://github.com/Mr0grog/editorconfig-textmate) plugin.
+  - Show hidden files/dotfiles in file browser (when the focus is on it): `⌥⌘i` ([source](https://stackoverflow.com/a/19737418)).
+  - Install the Rust bundle: `TextMate` > `Preferences...` > `Bundles`.
+  - Change font size: `View` > `Font` > `Show Fonts`.
+  - `.tm_properties` file:
+    - Local/project settings.
+    - Reference: `~/Downloads/TextMate.app/Contents/Resources/Default.tmProperties` file (assuming the application is in the `~/Downloads/` folder).
 
 ### Snippets
 
