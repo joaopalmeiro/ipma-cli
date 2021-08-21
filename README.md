@@ -59,5 +59,19 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - `let one_thousand = 1_000;`.
   - `f64`, `f32`, `i8`, `i16`, `i32`, `i64`, `i128`, `u8` (unsigned integer), `u16`, `u32`, `u64`, `u128`, `char` (a Unicode validated `u32`).
   - `as`: to convert numbers (`return x as f64 / y as f64;`, for example).
+  - An Expression evaluates to a value. A Statement does not evaluate to a value.
+  - In a function: `return x * y;` (Statement, `x * y` Expression) or `x * y` (Expression). If a function ends with an Expression, it automatically returns that Expression.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
+
+### Snippets
+
+```rust
+let message = if x > 1 {
+    "..."
+} else if x > 1_000 {
+    "..."
+} else {
+    "..."
+};
+```
