@@ -56,5 +56,8 @@ A Rust CLI to get weather forecasts in Portugal from IPMA.
   - The elements of a tuple can have different types.
   - `let x: f64 = 1.1;` (type annotation).
   - It is necessary to add type annotations when defining functions.
+  - `let one_thousand = 1_000;`.
+  - `f64`, `f32`, `i8`, `i16`, `i32`, `i64`, `i128`, `u8` (unsigned integer), `u16`, `u32`, `u64`, `u128`, `char` (a Unicode validated `u32`).
+  - `as`: to convert numbers (`return x as f64 / y as f64;`, for example).
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
