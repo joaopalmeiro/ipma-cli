@@ -5,6 +5,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
 ## References
 
 - Chris Biscardi's [Rust Adventure](https://www.rustadventure.dev/) email course.
+- Richard Feldman's [The Rust Programming Language](https://frontendmasters.com/courses/rust/) course ([Frontend Masters](https://frontendmasters.com/)).
 
 ## Notes
 
@@ -37,7 +38,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
   - Rust is primarily an Expression-based language. There is always a return value from a block. This even applies to `if` (in JavaScript, `if` is a Statement and doesn't return a value, for example).
   - The last value in an Expression is returned from that Expression.
   - Semicolons turn Expressions into Statements. They are operators that take an Expression, evaluate it, and discard the result.
-  - Default return value of a function: `()` ("unit").
+  - Default return value of a function: `()` ("unit"). Similar to `void`.
   - A struct is similar to an object in JavaScript.
   - `.collect`: to consume the iterator (to get all values without `.next`).
   - CLI crates:
@@ -63,6 +64,18 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
   - In a function: `return x * y;` (Statement, `x * y` Expression) or `x * y` (Expression). If a function ends with an Expression, it automatically returns that Expression.
   - Macro: it can be seen as a kind of syntactic sugar.
   - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) (VS Code extension).
+  - Collections:
+    - Tuples:
+      - `let point: (i64, i64, i64) = (0, 0, 0);`.
+      - `point.0`/`point.1`/`point.2` for tuple indexing, for example.
+      - Destructuring: `let (x, y, z) = point;` or `let (x, y, _) = point;`.
+    - Structs:
+      - Destructuring: `let Point { x, y, z } = point;` or `let Point { x, y: _, z } = point;` or `let Point { x, z, .. } = point;`.
+    - Arrays:
+      - Only one type and fixed size: `let mut years: [i32; 3] = [1995, 2000, 2005];`.
+      - `let first_year = years[0];`.
+      - Destructuring: `let [_, second_year, third_year] = years;`.
+      - It is possible to iterate over them, unlike tuples and structs (`for year in years.iter() { ... }`).
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
 - [TextMate](https://macromates.com/):
