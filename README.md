@@ -5,6 +5,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
 ## References
 
 - Chris Biscardi's [Rust Adventure](https://www.rustadventure.dev/) email course.
+- Chris Biscardi's [weather-cli](https://github.com/rust-adventure/weather-cli) crate.
 - Richard Feldman's [The Rust Programming Language](https://frontendmasters.com/courses/rust/) course ([Frontend Masters](https://frontendmasters.com/)).
 
 ## Notes
@@ -79,7 +80,8 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
       - It is possible to iterate over them, unlike tuples and structs (`for year in years.iter() { ... }`).
     - In memory, they (tuples, structs, and arrays) are all represented as adjacent bytes with no extra metadata/overhead.
     - Pattern matching: similar to a switch statement.
-    - Use `impl` to add methods to enums. You can think of these as functions defined in a specific namespace. `self` ([keyword](https://doc.rust-lang.org/std/keyword.self.html)) is similar to Python.
+    - Use `impl` to add methods to enums. You can think of these as functions defined in a specific namespace. `self` ([keyword](https://doc.rust-lang.org/std/keyword.self.html)) is similar to Python (`color.rgb()` vs. `Color::rgb(color)`).
+    - `Option` enum ([documentation](https://doc.rust-lang.org/std/option/enum.Option.html)). Type `Option` represents an optional value: every `Option` is either `Some` and contains a value, or `None`, and does not. `let email: Option<String> = Some(email_str);`. `<...>` for type parameters.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
 - [TextMate](https://macromates.com/):
@@ -114,7 +116,7 @@ enum Color {
     Green,  // variant
     Yellow, // variant
     Red,    // variant
-    // It is possible to have structs or tuples as well.
+    // It is possible to have structs or tuples (payload) as well.
 }
 
 let go: Color = Color::Green;
