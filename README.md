@@ -98,6 +98,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
   - `.tm_properties` file:
     - Local/project settings.
     - Reference: `~/Downloads/TextMate.app/Contents/Resources/Default.tmProperties` file (assuming the application is in the `~/Downloads/` folder).
+- [EME](https://github.com/egoist/eme) (Markdown editor).
 
 ### Snippets
 
