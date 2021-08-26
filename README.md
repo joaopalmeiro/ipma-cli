@@ -99,6 +99,11 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
     - Local/project settings.
     - Reference: `~/Downloads/TextMate.app/Contents/Resources/Default.tmProperties` file (assuming the application is in the `~/Downloads/` folder).
 - [EME](https://github.com/egoist/eme) (Markdown editor).
+- [Victor Mono](https://rubjo.github.io/victor-mono/):
+  - Open-source monospaced font.
+  - [Repo](https://github.com/rubjo/victor-mono).
+  - [Package](https://www.npmjs.com/package/victormono).
+  - [Example](https://www.programmingfonts.org/#victor-mono).
 
 ### Snippets
 
