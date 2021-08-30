@@ -74,6 +74,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
       - Destructuring: `let Point { x, y, z } = point;` or `let Point { x, y: _, z } = point;` or `let Point { x, z, .. } = point;`.
       - Naming convention: `UpperCamelCase`.
     - Arrays:
+      - Stack-allocated.
       - Only one type and fixed size: `let mut years: [i32; 3] = [1995, 2000, 2005];`.
       - `let first_year = years[0];`.
       - Destructuring: `let [_, second_year, third_year] = years;`.
@@ -83,10 +84,12 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
     - Use `impl` to add methods to enums. You can think of these as functions defined in a specific namespace. `self` ([keyword](https://doc.rust-lang.org/std/keyword.self.html)) is similar to Python (`color.rgb()` vs. `Color::rgb(color)`).
     - `Option` enum ([documentation](https://doc.rust-lang.org/std/option/enum.Option.html)). Type `Option` represents an optional value: every `Option` is either `Some` and contains a value, or `None`, and does not. `let email: Option<String> = Some(email_str);`. `<...>` for type parameters.
     - Vectors:
+      - Heap-allocated (dynamic length).
       - `let mut years: Vec<i32> = vec![1995, 2000, 2005];`.
       - `years.push(2010);`.
       - `let length: usize = years.len();`. On a 64-bit (32-bit) system, `usize` is equivalent to `u64` (`u32`).
       - It is possible to iterate over them.
+      - `let nums = Vec::with_capacity(5);`: free memory slots for the vector, even if the vector does not occupy them, thus accommodating future pushes more efficiently, for example.
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
 - [TextMate](https://macromates.com/):
