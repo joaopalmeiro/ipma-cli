@@ -90,6 +90,7 @@ A [Rust](https://www.rust-lang.org/) CLI to get weather forecasts in Portugal fr
       - `let length: usize = years.len();`. On a 64-bit (32-bit) system, `usize` is equivalent to `u64` (`u32`).
       - It is possible to iterate over them.
       - `let nums = Vec::with_capacity(5);`: free memory slots for the vector, even if the vector does not occupy them, thus accommodating future pushes more efficiently, for example.
+    - Ownership. When Rust allocates, it assigns an owner to that allocation (the owner is basically the scope). Ownership essentially refers to the responsibility to deallocate and it is transferable (when exiting a scope).
 - [direnv](https://direnv.net/): to load and unload environment variables depending on the current directory.
 - [Zig](https://ziglang.org/) programming language.
 - [TextMate](https://macromates.com/):
@@ -152,4 +153,10 @@ match current_color {
         println!("");
     }
 }
+
+
+let last_city = match city_names.pop() {
+    Some(inner_value) => inner_value,
+    None => "",
+};
 ```
